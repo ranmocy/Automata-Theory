@@ -1,0 +1,1090 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     44006,       1081]
+NotebookOptionsPosition[     43381,       1058]
+NotebookOutlinePosition[     43737,       1074]
+CellTagsIndexPosition[     43694,       1071]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"0", "\[Rule]", "1"}], ",", "init"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "\[Rule]", "2"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "\[Rule]", "6"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "\[Rule]", "3"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "\[Rule]", "5"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"3", "\[Rule]", "4"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"3", "\[Rule]", "8"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"4", "\[Rule]", "8"}], ",", "ab"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"5", "\[Rule]", "8"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"5", "\[Rule]", "4"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"6", "\[Rule]", "8"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"6", "\[Rule]", "7"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"7", "\[Rule]", "4"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"7", "\[Rule]", "8"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"8", "\[Rule]", "8"}], ",", "ab"}], "}"}]}], 
+    "\[IndentingNewLine]", "}"}], ",", 
+   RowBox[{"DirectedEdges", "\[Rule]", "True"}], ",", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}], ",", 
+   RowBox[{"BaseStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"FontWeight", "\[Rule]", "\"\<Bold\>\""}], ",", 
+      RowBox[{"FontSize", "\[Rule]", "20"}]}], "}"}]}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5869872660347147`*^9, 3.586987814818302*^9}, {
+  3.586988127520999*^9, 3.586988185050644*^9}, {3.586991303346743*^9, 
+  3.586991356325597*^9}, {3.58699281567863*^9, 3.586992821097084*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   TagBox[GraphicsComplexBox[CompressedData["
+1:eJwBEQLu/SFib1JlAgAAACAAAAACAAAAAAAAAAAAAAAAfyLNyT/tP2p0FQtr
+V/I/hRioQ28i7j/Az2K0NrEAQJY+ifwrovs/MMhbU4M/AUDYHrHzL2rMP7kD
+JjWF6QZADjZlLz7O9j+Imdwm/DAKQOFa7SsTtvs/CH07i39cDUCl+fs+a63t
+Py0sM4Y/TwhAkGhMpcg25z9RQV0ZpKEJQAAAAAAAAAAANcaDxEijBkDSdqFv
+/uTkP9fTBe5DTwZARMFMgq2W5D/n7BbTAvkFQBmsHeoYkOQ/Z6UogU6kBUAy
+vzWVitHkP7BN3JveVAVA+Cz7QiNY5T+eCIKZLw4FQPcLiMj6HeY/3d5vmFvT
+BEAkEZxtYhrnP7+eOIX3pgRAKuh8eEZC6D9QRU0Z9ooEQD5m2qCqiOk/h7Ln
+95GABEAyZI3zO9/qPzNXJN8/iARAw7UlwPE27D8e22yIqaEEQAHCR4C2gO0/
+uiXDcbHLBECO2j5PEa7uP6jxYmV/BAVAJk7Vgcix7z8bu/QylUkFQBe43h07
+QPA/Awh/seqXBUCe450+hIjwP/f1bM8P7AVA9v00hZOu8D9jDvoxU0IGQJNN
+mlm9sPA/OOQXsuuWBkDaTZ9t6Y7wP8yEseQi5gZAGtUBzpNK8D9l9HTQfiwH
+QHaCQWl4ze8/opmH/OhmB0CbJ22uiM/uP2zaVyHRkgdAhN9CWn2m7T9D++p2
+
+     "], {
+      {RGBColor[0.5, 0., 0.], Arrowheads[{{0.026543448287419513`, 0.7}}], 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["init", StripOnInput -> False], TraditionalForm]], {
+              0, 0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{1, 2}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{2, 3}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{2, 4}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{3, 5}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{3, 6}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{4, 8}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{4, 9}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{5, 7}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{5, 8}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{6, 8}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{6, 7}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["ab", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{7, 8}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["ab", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 
+         24, 25, 26, 27, 28, 29, 30, 31, 32, 8}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{9, 7}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.026543448287419513`, 0.8}}], 
+        ArrowBox[{9, 8}]}}, {InsetBox[
+        FrameBox["0",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 1], InsetBox[
+        FrameBox["1",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 2], InsetBox[
+        FrameBox["2",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 3], InsetBox[
+        FrameBox["6",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 4], InsetBox[
+        FrameBox["3",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 5], InsetBox[
+        FrameBox["5",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 6], InsetBox[
+        FrameBox["4",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 7], InsetBox[
+        FrameBox["8",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 8], InsetBox[
+        FrameBox["7",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 9]}}],
+    Annotation[#, 
+     VertexCoordinateRules -> {{0., 0.9140366560495465}, {1.1463423188172563`,
+       0.9417034455698433}, {2.086530122056473, 1.7270927300159307`}, {
+      2.1560122024902952`, 0.22199057959573198`}, {2.8640236046053045`, 
+      1.4253522731190773`}, {3.2739184413978286`, 1.7319518772034643`}, {
+      3.6701651456384106`, 0.9274193029557877}, {3.0386953815809847`, 
+      0.7254374721990349}, {3.203926275404378, 0.}}]& ], 
+   {StrokeForm[RGBColor[0.5, 0., 0.]], EdgeForm[GrayLevel[0]], EdgeForm[None],
+     CircleBox[{3.6729184578256855`, 0.9245578922107731}, \
+{0.08651663536459253, 0.08651663536459231}]}, 
+   {StrokeForm[RGBColor[0.5, 0., 0.]], EdgeForm[GrayLevel[0]], EdgeForm[None],
+     CircleBox[{3.6737519800698797`, 0.9237109260594132}, \
+{0.12246937846412864`, 0.12246937846412953`}]}},
+  AspectRatio->Automatic,
+  BaseStyle->{FontWeight -> "Bold", FontSize -> 20},
+  FrameTicks->None,
+  ImagePadding->{{0., 1.}, {1., 0.}},
+  ImageSize->Full,
+  PlotRange->{{-0.4587706432048013, 4.128935788843211}, {-0.216493984650433, 
+   1.9484458618538973`}},
+  PlotRangePadding->Automatic]], "Input",
+ CellChangeTimes->{{3.58699160656654*^9, 3.586991609346862*^9}, {
+  3.586992253427368*^9, 3.5869922652158947`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"0", "\[Rule]", "1"}], ",", "init"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "\[Rule]", "2"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "\[Rule]", "1"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "\[Rule]", "2"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "\[Rule]", "3"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"3", "\[Rule]", "2"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"3", "\[Rule]", "4"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"4", "\[Rule]", "2"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"4", "\[Rule]", "1"}], ",", "b"}], "}"}]}], 
+    "\[IndentingNewLine]", "}"}], ",", 
+   RowBox[{"DirectedEdges", "\[Rule]", "True"}], ",", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}], ",", 
+   RowBox[{"BaseStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"FontWeight", "\[Rule]", "\"\<Bold\>\""}], ",", 
+      RowBox[{"FontSize", "\[Rule]", "20"}]}], "}"}]}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.586988252258131*^9, 3.586988317058208*^9}, 
+   3.58699143059984*^9, 3.586992500321026*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   TagBox[GraphicsComplexBox[CompressedData["
+1:eJw1kns01HkYxmd+wwxbSaikCIncCqFM9H7VZhGlErk0VEdr0Y5KVwnLrtZi
+Y1w6dJkYjvsSZUW+MrHJmHUd1yjVtMxklHErxuqPnnOe85znnOf96/3onGQe
+DiBIJNKRJX/Nb8pNlNwrG+qB7+ejDc3MP0Gj+frUmdc9wM2NFU7rkdG3XROt
+sMyUroC2p511jx/pgeyWYecoHTJKeX7Ejyl8Dyc1op3tSych29E9oDC6E9q/
+8AVzx6SQINB0n1poA0M5kd2THinUC5jWyW0tYMcZtaRtmgL9mFFXydAzuGSk
+0u1vPQUWupSYAe0aqLU+doKjPAW8yETx4MECKHFglCtVSuHVFAte6QfhvqJb
+Npr6UojlJLhumM/H+99bVdKZk3CNKWnwKXmIQ66IfCDzE2RLfVkPOmtwTfgu
+F17FR7DIJPOrWHXYMsjmxR/NE+ChyHAo5j7BGo9N87kdEvgs+qIvZFbjDPPX
+Nyzsx0ErvKNodX85XphjqVlOi8Gx6t7ryO47eCszoy9QXgyDRJF7Z3QqUG/V
+6alHiCBH70Kp75YKcIwwsvcMEEFfb/hAsbAehuRk3CQsguWx4oYk9eewJzDP
+KOA3MbxKeSbMquWDdpCLsnLpB9g64MkidnQA163QkLZZAqv4G322BXeB11pd
+q7igCUir9SL593XDYbnos9MmS//xt346bD232+nZbVJ3DRmZtez6zI2IwWOR
+XbbXgUD5AnJRICsHq9wlsk6WEOja+z3WwRceYnVvYXL5PIEMNNfdyLJvwFf2
+bchUMqAg98QtvPmhF3hWMZavakhBnr55E3MT7XgivOlBBkFBlfMJuY8dBVjp
+jWVc2SMCOatqFbA0+3GKQsm7sP0EWvM8S69X+yVu8l7/5HrzEh9yEbxCtWG8
+UqHmAX0XGSlfQlbStmHMetemqlJMQh4aBasyHYbx7pVHYqIMSEitr+PQw6iX
+WP2MAcMtdBHiX6zYW5rTj3N6Q8XjrTKwUa6ecRsT4PyrOxXfhMlgm5Xr+Or7
+HXigsc/8UIgM6n5pubsIPBylIWKMVsrgqcMPZ9TjuJgz0SXsdVyE0+ffSnTS
+qvAnfzZNR4mEbIc92Gty87DmCtWBtX+SkNupnaOBq+LxoGESd3bDV/7HF2/T
+N2GRX8cZeR4ZhRaEJp3z+gssyw6f8pgjo79n2W7KTRVw/ObquUYDAu2s/JAs
+X1wFCXvN2Ps8CTQrSjX2P14DectDwpriCPSfjFo701sH53w/IptqArl1ujD6
+lZ5Cj8PyX5NES/eOaSGOaQ3AqVe48kiLgkwGtt7fv8gFuwPl6YuT8qh/jzG+
+mNgJl0tazcYMqIiHjE2/s+wC0rC9UZwvFa1xTbP60tIFtDovuaZkKrIaLbLS
+ONoNI5PsFen/UJHaBRMz23+74XO91o/CBSqSXm3up9MFsGwZWzHPkobiBcaF
+0jQBjNOUWrjBNKQovTjoMiKAe66+hhtZNESNyiF8ZzrBY2FgOz9gqXs6IerH
+DjDVXHeXsYOG9LdMS27MtIPsJ9n0EI2GrL0TnCyWtcNbdoMuo4eKrnYzA1xM
+2kD9kJ2HKJeK1D3TnemP+FBxWlcl/TwVmY242vK2tYJQvFnrZ0RFtgcrac2N
+LeDqF0HaHExBgU7rjh5wLwcV0onT9B0UhHIs6OSwEojni0PuLPE5gUamL1fm
+Q4ykK4XRSqAJP9PpqGAO5Fcn/p6UQSAS2VD3bCYbbopXmu0+sdQ50ZkzsZkQ
+mZ2UeN2IQOwxH453cyrcztXm+U+SUb1KYWQP5Sb8D/zQc5Q=
+     "], {
+      {RGBColor[0.5, 0., 0.], Arrowheads[{{0.02882450116424061, 0.7}}], 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["init", StripOnInput -> False], TraditionalForm]], {
+              0, 0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{1, 2}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{2, 3}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 
+         21, 22, 23, 24, 25, 26, 27, 28, 2}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{3, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 
+         43, 44, 45, 46, 47, 48, 49, 50, 51, 3}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{3, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 
+         66, 67, 4}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{4, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 
+         82, 83, 3}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{4, 5}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{5, 3}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{5, 2}]}}, {InsetBox[
+        FrameBox["0",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 1], InsetBox[
+        FrameBox["1",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 2], InsetBox[
+        FrameBox["2",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 3], InsetBox[
+        FrameBox["3",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 4], InsetBox[
+        FrameBox["4",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 5]}}],
+    Annotation[#, 
+     VertexCoordinateRules -> {{0., 0.37296691530920106`}, {
+      1.1370088216206264`, 0.3731669374799618}, {2.1430490502577597`, 0.}, {
+      3.0284074594391965`, 0.37320192572072414`}, {2.1413579797312687`, 
+      0.7468792783604548}}]& ], GeometricTransformationBox[GraphicsGroupBox[{
+      {StrokeForm[RGBColor[0.5, 0., 0.]], EdgeForm[GrayLevel[0]], EdgeForm[
+       None], CircleBox[{1.1416479478032948`, 0.3756634600609514}, \
+{0.06564668128258422, 0.06564668128258433}]}, 
+      {StrokeForm[RGBColor[0.5, 0., 0.]], EdgeForm[GrayLevel[0]], EdgeForm[
+       None], CircleBox[{1.1395220819516316`, 0.376554675309257}, \
+{0.0915868862056941, 0.09158688620569405}]}}], {{{{0.9999999999999994, 0.}, {
+      0., 0.9999999999999994}}, {1.0020834458305607`, 
+      0.36946852796828644`}}}]},
+  AspectRatio->Automatic,
+  BaseStyle->{FontWeight -> "Bold", FontSize -> 20},
+  FrameTicks->None,
+  ImagePadding->{{0., 1.}, {1., 0.}},
+  ImageSize->Full,
+  PlotRange->{{-0.37855093242989957`, 
+   3.406958391869096}, {-0.6526295130514667, 0.9023802551840016}},
+  PlotRangePadding->Automatic]], "Input",
+ CellChangeTimes->{{3.5869925294138727`*^9, 3.586992533779997*^9}}],
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"0", "\[Rule]", "1"}], ",", "init"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "\[Rule]", "2"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "\[Rule]", "1"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "\[Rule]", "2"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "\[Rule]", "3"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"3", "\[Rule]", "2"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"3", "\[Rule]", "4"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"4", "\[Rule]", "2"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"4", "\[Rule]", "1"}], ",", "b"}], "}"}]}], 
+    "\[IndentingNewLine]", "}"}], ",", 
+   RowBox[{"DirectedEdges", "\[Rule]", "True"}], ",", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}], ",", 
+   RowBox[{"BaseStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"FontWeight", "\[Rule]", "\"\<Bold\>\""}], ",", 
+      RowBox[{"FontSize", "\[Rule]", "20"}]}], "}"}]}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5869872660347147`*^9, 3.586987814818302*^9}, {
+   3.586988127520999*^9, 3.586988185050644*^9}, 3.5869912827668133`*^9, {
+   3.586991460114182*^9, 3.586991531619602*^9}, 3.586991562741094*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   TagBox[GraphicsComplexBox[CompressedData["
+1:eJw1kns01HkYxmd+wwxbSaikCIncCqFM9H7VZhGlErk0VEdr0Y5KVwnLrtZi
+Y1w6dJkYjvsSZUW+MrHJmHUd1yjVtMxklHErxuqPnnOe85znnOf96/3onGQe
+DiBIJNKRJX/Nb8pNlNwrG+qB7+ejDc3MP0Gj+frUmdc9wM2NFU7rkdG3XROt
+sMyUroC2p511jx/pgeyWYecoHTJKeX7Ejyl8Dyc1op3tSych29E9oDC6E9q/
+8AVzx6SQINB0n1poA0M5kd2THinUC5jWyW0tYMcZtaRtmgL9mFFXydAzuGSk
+0u1vPQUWupSYAe0aqLU+doKjPAW8yETx4MECKHFglCtVSuHVFAte6QfhvqJb
+Npr6UojlJLhumM/H+99bVdKZk3CNKWnwKXmIQ66IfCDzE2RLfVkPOmtwTfgu
+F17FR7DIJPOrWHXYMsjmxR/NE+ChyHAo5j7BGo9N87kdEvgs+qIvZFbjDPPX
+Nyzsx0ErvKNodX85XphjqVlOi8Gx6t7ryO47eCszoy9QXgyDRJF7Z3QqUG/V
+6alHiCBH70Kp75YKcIwwsvcMEEFfb/hAsbAehuRk3CQsguWx4oYk9eewJzDP
+KOA3MbxKeSbMquWDdpCLsnLpB9g64MkidnQA163QkLZZAqv4G322BXeB11pd
+q7igCUir9SL593XDYbnos9MmS//xt346bD232+nZbVJ3DRmZtez6zI2IwWOR
+XbbXgUD5AnJRICsHq9wlsk6WEOja+z3WwRceYnVvYXL5PIEMNNfdyLJvwFf2
+bchUMqAg98QtvPmhF3hWMZavakhBnr55E3MT7XgivOlBBkFBlfMJuY8dBVjp
+jWVc2SMCOatqFbA0+3GKQsm7sP0EWvM8S69X+yVu8l7/5HrzEh9yEbxCtWG8
+UqHmAX0XGSlfQlbStmHMetemqlJMQh4aBasyHYbx7pVHYqIMSEitr+PQw6iX
+WP2MAcMtdBHiX6zYW5rTj3N6Q8XjrTKwUa6ecRsT4PyrOxXfhMlgm5Xr+Or7
+HXigsc/8UIgM6n5pubsIPBylIWKMVsrgqcMPZ9TjuJgz0SXsdVyE0+ffSnTS
+qvAnfzZNR4mEbIc92Gty87DmCtWBtX+SkNupnaOBq+LxoGESd3bDV/7HF2/T
+N2GRX8cZeR4ZhRaEJp3z+gssyw6f8pgjo79n2W7KTRVw/ObquUYDAu2s/JAs
+X1wFCXvN2Ps8CTQrSjX2P14DectDwpriCPSfjFo701sH53w/IptqArl1ujD6
+lZ5Cj8PyX5NES/eOaSGOaQ3AqVe48kiLgkwGtt7fv8gFuwPl6YuT8qh/jzG+
+mNgJl0tazcYMqIiHjE2/s+wC0rC9UZwvFa1xTbP60tIFtDovuaZkKrIaLbLS
+ONoNI5PsFen/UJHaBRMz23+74XO91o/CBSqSXm3up9MFsGwZWzHPkobiBcaF
+0jQBjNOUWrjBNKQovTjoMiKAe66+hhtZNESNyiF8ZzrBY2FgOz9gqXs6IerH
+DjDVXHeXsYOG9LdMS27MtIPsJ9n0EI2GrL0TnCyWtcNbdoMuo4eKrnYzA1xM
+2kD9kJ2HKJeK1D3TnemP+FBxWlcl/TwVmY242vK2tYJQvFnrZ0RFtgcrac2N
+LeDqF0HaHExBgU7rjh5wLwcV0onT9B0UhHIs6OSwEojni0PuLPE5gUamL1fm
+Q4ykK4XRSqAJP9PpqGAO5Fcn/p6UQSAS2VD3bCYbbopXmu0+sdQ50ZkzsZkQ
+mZ2UeN2IQOwxH453cyrcztXm+U+SUb1KYWQP5Sb8D/zQc5Q=
+     "], {
+      {RGBColor[0.5, 0., 0.], Arrowheads[{{0.02882450116424061, 0.7}}], 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["init", StripOnInput -> False], TraditionalForm]], {
+              0, 0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{1, 2}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{2, 3}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 
+         21, 22, 23, 24, 25, 26, 27, 28, 2}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{3, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 
+         43, 44, 45, 46, 47, 48, 49, 50, 51, 3}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{3, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 
+         66, 67, 4}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{4, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 
+         82, 83, 3}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{4, 5}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{5, 3}]}, 
+       {Arrowheads[{{0.5, 0.5, 
+           GraphicsBox[{
+             GrayLevel[0], 
+             InsetBox[
+              BoxData[
+               FormBox[
+                StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+              0}, 
+              ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+              GrayLevel[1]]}]}, {0.02882450116424061, 0.8}}], 
+        ArrowBox[{5, 2}]}}, {InsetBox[
+        FrameBox["0",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 1], InsetBox[
+        FrameBox["1",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 2], InsetBox[
+        FrameBox["2",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 3], InsetBox[
+        FrameBox["3",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 4], InsetBox[
+        FrameBox["4",
+         Background->RGBColor[1, 1, 0.8],
+         FrameStyle->RGBColor[0.94, 0.85, 0.36],
+         StripOnInput->False], 5]}}],
+    Annotation[#, 
+     VertexCoordinateRules -> {{0., 0.37296691530920106`}, {
+      1.1370088216206264`, 0.3731669374799618}, {2.1430490502577597`, 0.}, {
+      3.0284074594391965`, 0.37320192572072414`}, {2.1413579797312687`, 
+      0.7468792783604548}}]& ], GraphicsGroupBox[{
+     {StrokeForm[RGBColor[0.5, 0., 0.]], EdgeForm[GrayLevel[0]], EdgeForm[
+      None], CircleBox[{1.1416479478032948`, 0.3756634600609514}, \
+{0.06564668128258422, 0.06564668128258433}]}, 
+     {StrokeForm[RGBColor[0.5, 0., 0.]], EdgeForm[GrayLevel[0]], EdgeForm[
+      None], CircleBox[{1.1395220819516316`, 0.376554675309257}, \
+{0.0915868862056941, 0.09158688620569405}]}}], 
+   GeometricTransformationBox[GraphicsGroupBox[{
+      {StrokeForm[RGBColor[0.5, 0., 0.]], EdgeForm[GrayLevel[0]], EdgeForm[
+       None], CircleBox[{1.1416479478032948`, 0.3756634600609514}, \
+{0.06564668128258422, 0.06564668128258433}]}, 
+      {StrokeForm[RGBColor[0.5, 0., 0.]], EdgeForm[GrayLevel[0]], EdgeForm[
+       None], CircleBox[{1.1395220819516316`, 0.376554675309257}, \
+{0.0915868862056941, 0.09158688620569405}]}}], {{{{0.9999999999999997, 0.}, {
+      0., 0.9999999999999997}}, {1.003029959424791, -0.37554691211323743`}}}],
+    GeometricTransformationBox[GraphicsGroupBox[{
+      {StrokeForm[RGBColor[0.5, 0., 0.]], EdgeForm[GrayLevel[0]], EdgeForm[
+       None], CircleBox[{1.1416479478032948`, 0.3756634600609514}, \
+{0.06564668128258422, 0.06564668128258433}]}, 
+      {StrokeForm[RGBColor[0.5, 0., 0.]], EdgeForm[GrayLevel[0]], EdgeForm[
+       None], CircleBox[{1.1395220819516316`, 0.376554675309257}, \
+{0.0915868862056941, 0.09158688620569405}]}}], {{{{0.9999999999999997, 0.}, {
+      0., 0.9999999999999997}}, {
+      1.8871082576399678`, -0.0033944985852965015`}}}]},
+  AspectRatio->Automatic,
+  BaseStyle->{FontWeight -> "Bold", FontSize -> 20},
+  FrameTicks->None,
+  ImagePadding->{{0., 1.}, {1., 0.}},
+  ImageSize->Full,
+  PlotRange->{{-0.37855093242989957`, 
+   3.406958391869096}, {-0.6526295130514667, 0.9023802551840016}},
+  PlotRangePadding->Automatic]], "Input",
+ CellChangeTimes->{{3.586992307884775*^9, 3.58699234160297*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"0", "\[Rule]", "1"}], ",", "init"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "\[Rule]", "1"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "\[Rule]", "2"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "\[Rule]", "3"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "\[Rule]", "2"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"3", "\[Rule]", "1"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"3", "\[Rule]", "4"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"4", "\[Rule]", "3"}], ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"4", "\[Rule]", "5"}], ",", "b"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"5", "\[Rule]", "5"}], ",", "ab"}], "}"}]}], 
+    "\[IndentingNewLine]", "}"}], ",", 
+   RowBox[{"DirectedEdges", "\[Rule]", "True"}], ",", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}], ",", 
+   RowBox[{"BaseStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"FontWeight", "\[Rule]", "\"\<Bold\>\""}], ",", 
+      RowBox[{"FontSize", "\[Rule]", "20"}]}], "}"}]}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.586992800419425*^9, 3.586992875507469*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[CompressedData["
+1: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
+    "], {
+     {RGBColor[0.5, 0., 0.], Arrowheads[{{0.024901725625279637`, 0.7}}], 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["init", StripOnInput -> False], TraditionalForm]], {0,
+              0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0.024901725625279637`, 0.8}}], 
+       ArrowBox[{1, 2}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0.024901725625279637`, 0.8}}], 
+       ArrowBox[{2, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 
+        22, 23, 24, 25, 26, 27, 28, 29, 2}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0.024901725625279637`, 0.8}}], 
+       ArrowBox[{2, 3}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0.024901725625279637`, 0.8}}], 
+       ArrowBox[{3, 4}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0.024901725625279637`, 0.8}}], 
+       ArrowBox[{3, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 
+        44, 45, 46, 47, 48, 49, 50, 51, 52, 3}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0.024901725625279637`, 0.8}}], 
+       ArrowBox[{4, 2}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0.024901725625279637`, 0.8}}], 
+       ArrowBox[{4, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 
+        67, 68, 5}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["a", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0.024901725625279637`, 0.8}}], 
+       ArrowBox[{5, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 
+        83, 84, 4}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["b", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0.024901725625279637`, 0.8}}], 
+       ArrowBox[{5, 6}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["ab", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0.024901725625279637`, 0.8}}], 
+       ArrowBox[{6, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 
+        99, 100, 101, 102, 103, 104, 105, 106, 107, 6}]}}, {InsetBox[
+       FrameBox["0",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 1], InsetBox[
+       FrameBox["1",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 2], InsetBox[
+       FrameBox["2",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 3], InsetBox[
+       FrameBox["3",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 4], InsetBox[
+       FrameBox["4",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 5], InsetBox[
+       FrameBox["5",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 6]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{0., 0.}, {0.9742956574777875, 
+     0.305358180511502}, {1.4103434750775938`, 0.964439006261501}, {
+     2.078073929522251, 0.4318337655808984}, {3.255259455089477, 
+     0.302226899151455}, {4.233264395391241, 0.2018929319466421}}]& ],
+  AspectRatio->Automatic,
+  BaseStyle->{FontWeight -> "Bold", FontSize -> 20},
+  FrameTicks->None,
+  ImageSize->Full,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{3.586992878635489*^9}]
+}, Open  ]]
+},
+WindowSize->{1440, 816},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 2413, 69, 199, "Input"],
+Cell[2973, 91, 9906, 242, 645, InheritFromParent],
+Cell[12882, 335, 1615, 46, 131, InheritFromParent],
+Cell[14500, 383, 8031, 179, 564, InheritFromParent],
+Cell[22534, 564, 1716, 47, 131, "Input"],
+Cell[24253, 613, 8976, 194, 564, InheritFromParent],
+Cell[CellGroupData[{
+Cell[33254, 811, 1695, 49, 148, "Input"],
+Cell[34952, 862, 8413, 193, 518, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

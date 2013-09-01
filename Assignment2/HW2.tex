@@ -1,0 +1,274 @@
+% \title{Assignment 02 of Automata Theory}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% -----------------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+% -----------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm,amssymb} % Math packages
+\usepackage{graphicx}
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+% --------------------
+% Quote Style
+% --------------------
+
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\makeatletter
+
+\tikzset{%
+  fancy quotes/.style={
+    text width=\fq@width pt,
+    align=justify,
+    inner sep=.2em,
+    anchor=north west,
+    minimum width=\textwidth,
+  },
+  fancy quotes width/.initial={.8\textwidth},
+  fancy quotes marks/.style={
+    scale=2,
+    text=white,
+    inner sep=0pt,
+  },
+  fancy quotes opening/.style={
+    fancy quotes marks,
+  },
+  fancy quotes closing/.style={
+    fancy quotes marks,
+  },
+  fancy quotes background/.style={
+    show background rectangle,
+    inner frame xsep=0pt,
+    background rectangle/.style={
+      fill=gray!25,
+      rounded corners,
+    },
+  }
+}
+
+\newenvironment{fancyquotes}[1][]{%
+  \noindent
+  \tikzpicture[fancy quotes background]
+  \node[fancy quotes opening,anchor=north west] (fq@ul) at (0,0) {$``$};
+  \tikz@scan@one@point\pgfutil@firstofone(fq@ul.east)
+  \pgfmathsetmacro{\fq@width}{\textwidth - 2*\pgf@x}
+  \node[fancy quotes,#1] (fq@txt) at (fq@ul.north west) \bgroup}
+{\egroup;
+  \node[overlay,fancy quotes closing,anchor=east] at (fq@txt.south east) {''};
+  \endtikzpicture}
+
+\makeatother
+
+% --------------------
+% Header and Footer
+% --------------------
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead[L]{\normalfont \normalsize \textsc{Automata Theory}} % Class
+\fancyhead[R]{\normalfont \normalsize \textsc{Wanzhang Sheng}} % Author
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+% -----------------------------------------------------------------------------
+% TITLE SECTION
+% -----------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{
+  \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+  \huge Assignment 02 \\ % The assignment title
+  \horrule{2pt} \\[1.0cm] % Thick bottom horizontal rule
+}
+
+\author{Wanzhang Sheng} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+% -----------------------------------------------------------------------------
+% PROBLEM 1
+% -----------------------------------------------------------------------------
+\section{}
+
+\begin{fancyquotes}
+  For each of the following regular expressions, give a minimum-length string in $(a + b)^*$
+  not in the language.
+\end{fancyquotes}
+
+\begin{enumerate}
+\item (2 points) $b^*(ab)^*a^*$ doesn't match $aab$;
+\item (2 points) $(b^*+a^*)(a^*+b^*)(b^*+a^*)$ doesn't match $abab$;
+\item (2 points) $a^*(abb^*)b^*$ doesn't match $ba$;
+\item (2 points) $b^*(a+ba)^*b^*$ doesn't match $abba$;
+\end{enumerate}
+
+
+% -----------------------------------------------------------------------------
+% PROBLEM 2
+% -----------------------------------------------------------------------------
+\section{}
+
+\begin{fancyquotes}
+  Give a regular expression for each of the following languages:
+\end{fancyquotes}
+
+\begin{enumerate}
+\item (4 points) All strings over $\{a,b\}$ that end in $abb$: $(a+b)^*abb$;
+\item (4 points) All strings over $\{a,b\}$ that do not end in $abb$:
+  $(b^*+[a(a+ba+bba)^*bbb]^*)(\epsilon+a+ab)$;
+\item (4 points) All strings over $\{a,b\}$ that contain the substring bba but not the subtring $aa$:
+  $(a+b^*(bb^*a)^*b^*)bbab^*(bb^*a)^*b^*$;
+\item (4 points) All strings over $\{0,1\}$ that do not contain the substring $1111$:
+  $0^*(10+110+1110)^*0^*+0^*(1+11+111)$;
+\item (4 points) All strings over $\{0,1\}$ that represent binary numbers
+x, such that (x mod 4) == 1. (1, 5, 9, 13, etc). Leading zeroes are ok
+(so 0000101 would be in the language, for instance):
+  $1+(0+1)^*01$;
+\end{enumerate}
+
+
+% -----------------------------------------------------------------------------
+% PROBLEM 3
+% -----------------------------------------------------------------------------
+\section{}
+
+\begin{fancyquotes}
+  Give a Deterministic Finite Automaton for each of the following languages:
+\end{fancyquotes}
+
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{3-1}
+  \caption{The finite language $L=\{aba,bba,aab\}$}
+\end{figure}
+
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{3-2}
+  \caption{All strings over $\{a,b\}$ that end in $abb$}
+\end{figure}
+
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{3-3}
+  \caption{All strings over $\{a,b\}$ that do not end in $abb$}
+\end{figure}
+
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{3-4}
+  \caption{All strings over $\{a,b\}$ that contain the substring $babb$}
+\end{figure}
+
+
+% -----------------------------------------------------------------------------
+% PROBLEM 4
+% -----------------------------------------------------------------------------
+\section{}
+
+\begin{fancyquotes}
+  (5 point) Show that every finite language is regular.
+\end{fancyquotes}
+
+% \subsection{} % (fold)
+% \begin{fancyquotes}
+%   (2 points) Give a directed graph representation of $R$ for the set $S=\{a,b,c\}$.
+% \end{fancyquotes}
+
+% \begin{figure}[hp]
+%   \centering
+%   \includegraphics[width=0.5\textwidth]{5-1}
+%   \caption{$R$ for the set $S=\{a,b,c\}$}
+% \end{figure}
+% % subsection  (end)
+
+% \subsection{} % (fold)
+% \begin{fancyquotes}
+%   (2 points) Show that $R$ is a partial order on $P$ (for the general case, not just example (a) above)
+% \end{fancyquotes}
+
+% \subsubsection{Reﬂexive}
+% For $\forall \Pi_0 \in P$, obvioursly for $\forall S_0 \in \Pi_0$, we have $S_0 \subseteq S_0$.
+% So $(\Pi_0,\Pi_0)\in R$, which means $R$ is reflexive.
+
+% \subsubsection{Transitive}
+% For $\forall \Pi_1,\Pi_2,\Pi_3 \in P$, which $(\Pi_1,\Pi_2)\in R, (\Pi_2,\Pi_3)\in R$, we have $\forall S_1\in\Pi_1, \exists S_2, S_1\in S_2$ and $\forall S_2\in\Pi_2, \exists S_3, S_2\in S_3$.
+% So we have $\forall S_1\in\Pi_1, \exists S_3, S_1\in S_3$, which means $(\Pi_1,\Pi_3)\in R$.
+% So $R$ is transitive.
+
+% \subsubsection{Antisymmetric}
+% Considering any $(\Pi_1,\Pi_2)\in R$
+% Assume that $(\Pi_2,\Pi_1)\in R$ also.
+
+% Then $\forall s_1\in\Pi_1, \exists s_2\in\Pi_2, \exists s_3\in\Pi_1, s_1 \subseteq s_2 \subseteq s_3$.
+% Since $s_1 \subseteq s_3$, then we have $s_1 \cap s_3=s_1\neq \emptyset$ which means $\Pi_1$ is not a partition of $S$.
+
+% So the assumption of $(\Pi_2,\Pi_1)\in R$ is wrong.
+
+% So, for $\forall (\Pi_1,\Pi_2)\in R, (\Pi_2,\Pi_1)\notin R$, which means $R$ is antisymmetric.
+
+% So, $R$ is a partial order on $P$.
+% % subsection  (end)
+
+% \subsection{} % (fold)
+% \begin{fancyquotes}
+%   (2 points) What elements of $P$ are maximal and minimal (for the general case, not just example (a) above)
+% \end{fancyquotes}
+
+% $\{\{a\}:a\in P\}$ is the minimal.
+
+% $\{S\}$ is the maximal.
+% % subsection  (end)
+
+% \subsection{} % (fold)
+% \begin{fancyquotes}
+%   (2 points) Suppose that $P$ was an arbitrary collection of subsets of $2^S$, instead of partitions of $S$. Would $R$ still necessarily be a partial order?
+% \end{fancyquotes}
+
+% Considering two elements of $P$, $\Pi_1,\Pi_2\in P \subseteq 2^A$, which $S\in \Pi_1,\Pi_2$.
+
+% So, for $\forall s_1\in\Pi_1,\exists S\in\Pi_2, s_1\subset S$, which means $(\Pi_1,\Pi_2)\in R$.
+% Similarly, $\forall s_2\in\Pi_2,\exists S\in\Pi_1, s_2\subset S$, which means $(\Pi_2,\Pi_1)\in R$. In such a situation, $R$ is not antisymmetric.
+
+% So $R$ does not necessarily be a partial order
+% subsection  (end)
+
+\end{document}
