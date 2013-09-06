@@ -151,17 +151,18 @@
 \end{fancyquotes}
 
 \begin{enumerate}
-\item (4 points) All strings over $\{a,b\}$ that end in $abb$: $(a+b)^*abb$;
+\item (4 points) All strings over $\{a,b\}$ that end in $abb$:
+  $$(a+b)^*abb$$
 \item (4 points) All strings over $\{a,b\}$ that do not end in $abb$:
-  $(b^*+[a(a+ba+bba)^*bbb]^*)(\epsilon+a+ab)$;
-\item (4 points) All strings over $\{a,b\}$ that contain the substring bba but not the subtring $aa$:
-  $(a+b^*(bb^*a)^*b^*)bbab^*(bb^*a)^*b^*$;
+  $$(b^*+[a(a+ba+bba)^*bbb]^*)(\epsilon+a+ab)$$ or $$\epsilon + (a+b)^*(a+ab+bbb)$$
+\item (4 points) All strings over $\{a,b\}$ that contain the substring $bba$ but not the substring $aa$:
+  $$(a+b^*(bb^*a)^*b^*)bbab^*(bb^*a)^*b^*$$
 \item (4 points) All strings over $\{0,1\}$ that do not contain the substring $1111$:
-  $0^*(10+110+1110)^*0^*+0^*(1+11+111)$;
+  $$0^*(10+110+1110)^*0^*+0^*(1+11+111)$$
 \item (4 points) All strings over $\{0,1\}$ that represent binary numbers
-x, such that (x mod 4) == 1. (1, 5, 9, 13, etc). Leading zeroes are ok
-(so 0000101 would be in the language, for instance):
-  $1+(0+1)^*01$;
+$x$, such that $(x \bmod 4) \equiv 1$ (1, 5, 9, 13, etc). Leading zeroes are ok
+(so $0000101$ would be in the language, for instance):
+  $$(0+1)^*01$$
 \end{enumerate}
 
 
@@ -198,6 +199,7 @@ x, such that (x mod 4) == 1. (1, 5, 9, 13, etc). Leading zeroes are ok
   \caption{All strings over $\{a,b\}$ that contain the substring $babb$}
 \end{figure}
 
+\pagebreak
 
 % -----------------------------------------------------------------------------
 % PROBLEM 4
@@ -208,69 +210,28 @@ x, such that (x mod 4) == 1. (1, 5, 9, 13, etc). Leading zeroes are ok
   (5 point) Show that every finite language is regular.
 \end{fancyquotes}
 
-{\Huge TODO}
+Considering a finite language $M=(K,\Sigma,\Delta,s,F)$,
+which $K={q_1,q_2,q_3,\ldots,q_n}$ and $s=q_1$, $F={q_f,q_{f+1},\ldots,q_n}$.
 
-% \subsection{} % (fold)
-% \begin{fancyquotes}
-%   (2 points) Give a directed graph representation of $R$ for the set $S=\{a,b,c\}$.
-% \end{fancyquotes}
+Define regular languages base on $M$ as: $$R(i,j,k)=\{\omega:
+(q_i, \omega) \vdash^*_M (q_j,\epsilon) \between \{q_v: 1\leq v\leq k\} \}$$
 
-% \begin{figure}[hp]
-%   \centering
-%   \includegraphics[width=0.5\textwidth]{5-1}
-%   \caption{$R$ for the set $S=\{a,b,c\}$}
-% \end{figure}
-% % subsection  (end)
+For $k=0$, we have:
 
-% \subsection{} % (fold)
-% \begin{fancyquotes}
-%   (2 points) Show that $R$ is a partial order on $P$ (for the general case, not just example (a) above)
-% \end{fancyquotes}
+$$R(i,j,k)=R(i,j,0)=\{\omega: (q_i,\omega) \vdash_M (q_j,\epsilon)\}$$
 
-% \subsubsection{Reﬂexive}
-% For $\forall \Pi_0 \in P$, obvioursly for $\forall S_0 \in \Pi_0$, we have $S_0 \subseteq S_0$.
-% So $(\Pi_0,\Pi_0)\in R$, which means $R$ is reflexive.
+Base on the result of $k-1$, we can generate the $k$ case as:
 
-% \subsubsection{Transitive}
-% For $\forall \Pi_1,\Pi_2,\Pi_3 \in P$, which $(\Pi_1,\Pi_2)\in R, (\Pi_2,\Pi_3)\in R$, we have $\forall S_1\in\Pi_1, \exists S_2, S_1\in S_2$ and $\forall S_2\in\Pi_2, \exists S_3, S_2\in S_3$.
-% So we have $\forall S_1\in\Pi_1, \exists S_3, S_1\in S_3$, which means $(\Pi_1,\Pi_3)\in R$.
-% So $R$ is transitive.
+$$R(i,j,k)=R(i,j,k-1)\cup R(i,k,k-1)R(k,k,k-1)^*R(k,j,k-1)$$
 
-% \subsubsection{Antisymmetric}
-% Considering any $(\Pi_1,\Pi_2)\in R$
-% Assume that $(\Pi_2,\Pi_1)\in R$ also.
+Therefore $R(i,j,k)$ is regular.
 
-% Then $\forall s_1\in\Pi_1, \exists s_2\in\Pi_2, \exists s_3\in\Pi_1, s_1 \subseteq s_2 \subseteq s_3$.
-% Since $s_1 \subseteq s_3$, then we have $s_1 \cap s_3=s_1\neq \emptyset$ which means $\Pi_1$ is not a partition of $S$.
+Then we can union the regular languages of all final state:
 
-% So the assumption of $(\Pi_2,\Pi_1)\in R$ is wrong.
+$$R=\bigcup\{R(1,f,f): f\in F\}$$
 
-% So, for $\forall (\Pi_1,\Pi_2)\in R, (\Pi_2,\Pi_1)\notin R$, which means $R$ is antisymmetric.
+So for any finite language, we can find a equivalent regular language:
 
-% So, $R$ is a partial order on $P$.
-% % subsection  (end)
-
-% \subsection{} % (fold)
-% \begin{fancyquotes}
-%   (2 points) What elements of $P$ are maximal and minimal (for the general case, not just example (a) above)
-% \end{fancyquotes}
-
-% $\{\{a\}:a\in P\}$ is the minimal.
-
-% $\{S\}$ is the maximal.
-% % subsection  (end)
-
-% \subsection{} % (fold)
-% \begin{fancyquotes}
-%   (2 points) Suppose that $P$ was an arbitrary collection of subsets of $2^S$, instead of partitions of $S$. Would $R$ still necessarily be a partial order?
-% \end{fancyquotes}
-
-% Considering two elements of $P$, $\Pi_1,\Pi_2\in P \subseteq 2^A$, which $S\in \Pi_1,\Pi_2$.
-
-% So, for $\forall s_1\in\Pi_1,\exists S\in\Pi_2, s_1\subset S$, which means $(\Pi_1,\Pi_2)\in R$.
-% Similarly, $\forall s_2\in\Pi_2,\exists S\in\Pi_1, s_2\subset S$, which means $(\Pi_2,\Pi_1)\in R$. In such a situation, $R$ is not antisymmetric.
-
-% So $R$ does not necessarily be a partial order
-% subsection  (end)
+$$L(M)=L(R)$$
 
 \end{document}
