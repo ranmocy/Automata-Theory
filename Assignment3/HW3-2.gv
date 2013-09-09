@@ -1,0 +1,39 @@
+digraph HW3_2_1 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 3 5 7 9;
+	node[shape=circle];
+
+        0->1[label="init"];
+        1->2[label="bcd"];
+        2->3[label="a"];
+        3->3[label="bcd"];
+        
+        1->4[label="acd"];
+        4->5[label="b"];
+        5->5[label="acd"]
+
+        1->6[label="abd"];
+        6->7[label="c"]
+        7->7[label="abd"];
+
+        1->8[label="abc"];
+        8->9[label="d"];
+        9->9[label="abc"];
+}
+
+digraph HW3_2_2 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 1;
+	node[shape=circle];
+
+        0->1[label="init"];
+        
+        1->2[label="a"];
+        1->1[label="bc"];
+        
+        2->3[label="bc"];
+        3->4[label="c"];
+        4->1[label="b"];
+}

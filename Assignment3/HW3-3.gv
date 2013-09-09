@@ -1,0 +1,65 @@
+digraph HW3_3_1 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 3 5 7 9;
+	node[shape=circle];
+
+        0->1[label="init"];
+        1->2[label="bcd"];
+        2->3[label="a"];
+        3->3[label="bcd"];
+        
+        1->4[label="acd"];
+        4->5[label="b"];
+        5->5[label="acd"]
+
+        1->6[label="abd"];
+        6->7[label="c"]
+        7->7[label="abd"];
+
+        1->8[label="abc"];
+        8->9[label="d"];
+        9->9[label="abc"];
+}
+
+digraph HW3_3_2 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 1;
+	node[shape=circle];
+
+        0->1[label="init"];
+        
+        1->2[label="c"];
+        1->3[label="b"];
+        1->5[label="a"];
+
+        2->1[label="c"];
+        2->4[label="b"];
+        2->6[label="a"];
+
+        3->4[label="c"];
+        3->1[label="b"];
+        3->7[label="a"];
+
+        4->3[label="c"];
+        4->2[label="b"];
+        4->8[label="a"];
+
+        5->6[label="c"];
+        5->7[label="b"];
+        5->1[label="a"];
+
+        6->5[label="c"];
+        6->8[label="b"];
+        6->2[label="a"];
+
+        7->8[label="c"];
+        7->5[label="b"];
+        7->3[label="a"];
+
+        8->7[label="c"];
+        8->6[label="b"];
+        8->4[label="a"];
+
+}
