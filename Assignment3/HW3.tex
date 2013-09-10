@@ -133,64 +133,38 @@
   Give a DFA for each of the following languages:
 \end{fancyquotes}
 
-\begin{enumerate}
-\item
-  \begin{fancyquotes}
-    (4 points) All strings over $\{a, b, c\}$ that contain an even number
-    of $a$'s
-  \end{fancyquotes}
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{1-1}
+  \caption{All strings over $\{a, b, c\}$ that contain an even
+    number of $a$'s}
+\end{figure}
 
-  \begin{figure}[hp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{1-1}
-    \caption{All strings over $\{a, b, c\}$ that contain an even
-      number of $a$'s}
-  \end{figure}
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{1-2}
+  \caption{All strings over $\{a, b, c\}$ that contain an even number of $a$'s and an even number of $b$'s}
+\end{figure}
 
-\item
-  \begin{fancyquotes}
-    (4 points)All strings over $\{a, b, c\}$ that contain an even
-    number of $a$'s and an even number of $b$'s
-  \end{fancyquotes}
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{1-3}
+  \caption{All strings over $\{a,b\}$ that contain either $aab$ or $bba$ (or both)}
+\end{figure}
 
-  \begin{figure}[hp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{1-2}
-    \caption{All strings over $\{a, b, c\}$ that contain an even number of $a$'s and an even number of $b$'s}
-  \end{figure}
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{1-4}
+  \caption{All strings over $\{a,b\}$ that contain both $aab$ and $bba$}
+\end{figure}
 
-\item
-  \begin{fancyquotes}
-    (4 points) All strings over $\{a,b\}$ that contain either $aab$ or $bba$
-    (or both)
-  \end{fancyquotes}
-  \begin{figure}[hp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{1-3}
-    \caption{All strings over $\{a,b\}$ that contain either $aab$ or $bba$ (or both)}
-  \end{figure}
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{1-5}
+  \caption{All strings over $\{a,b\}$ that contain $aab$ but not $bba$}
+\end{figure}
 
-\item
-  \begin{fancyquotes}
-    (4 points) All strings over $\{a,b\}$ that contain both $aab$ and $bba$
-  \end{fancyquotes}
-  \begin{figure}[hp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{1-4}
-    \caption{All strings over $\{a,b\}$ that contain both $aab$ and $bba$}
-  \end{figure}
-
-\item
-  \begin{fancyquotes}
-    (4 points) All strings over $\{a,b\}$ that contain $aab$ but not $bba$
-  \end{fancyquotes}
-  \begin{figure}[hp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{1-5}
-    \caption{All strings over $\{a,b\}$ that contain $aab$ but not $bba$}
-  \end{figure}
-
-\end{enumerate}
+\pagebreak
 
 
 % -----------------------------------------------------------------------------
@@ -202,31 +176,22 @@
   Give a NFA for each of the following languages:
 \end{fancyquotes}
 
-\begin{enumerate}
-\item
-  \begin{fancyquotes}
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=.5\textwidth]{HW3-2.gv.png}
+  \caption{
     (4 points) $L$ = All strings over $\{a, b, c, d\}$ of length at least 2
     whose second symbol does not appear elsewhere in the string. So
     $bdabc, acbab, bacbd, abcdc \in L$, while $aa, bcabc, abcbc, dd \notin L$
-  \end{fancyquotes}
-  \begin{figure}[hp]
-    \centering
-    \includegraphics[width=.5\textwidth]{HW3-2.gv.png}
-    \caption{All strings over $\{a,b\}$ that contain $aab$ but not $bba$}
-  \end{figure}
+  }
+\end{figure}
 
-\item
-  \begin{fancyquotes}
-    (4 points) L = All strings over $\{a, b, c\}$ such that every $a$ is
-    followed by either the substring $bcb$ or $ccb$
-  \end{fancyquotes}
-  \begin{figure}[hp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{HW3-2.gv.2.png}
-    \caption{All strings over $\{a,b\}$ that contain $aab$ but not $bba$}
-  \end{figure}
-
-\end{enumerate}
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{HW3-2.gv.2.png}
+  \caption{(4 points) L = All strings over $\{a, b, c\}$ such that every $a$ is
+    followed by either the substring $bcb$ or $ccb$}
+\end{figure}
 
 
 % -----------------------------------------------------------------------------
@@ -250,12 +215,15 @@
     diagram, it does tend to get a little messy with a larger
     alphabet.
   \end{fancyquotes}
-  {\Huge TODO}
-  % \begin{figure}[hp]
-  %   \centering
-  %   \includegraphics[width=\textwidth]{HW3-3.gv.png}
-  %   \caption{All strings over $\{a,b\}$ that contain $aab$ but not $bba$}
-  % \end{figure}
+
+  Let $M=(K,\Sigma,\Delta,s,F)$
+
+  $$K=\{q_0,q_1,q_2,q_3,q_4,q_5,q_6,q_7\}$$
+  $$\Sigma=\{0,1,2,3,4,5,6,7,8,9\}$$
+  $$\Delta=\{((q_i,w),q_j): (i\times 10 + w) \bmod{7} \equiv j,
+  w\in\Sigma, 0\leq i,j\leq 7 \}$$
+  $$s=q_0$$
+  $$F=\{q_0\}$$
 
 \item
   \begin{fancyquotes}
@@ -264,8 +232,9 @@
   \end{fancyquotes}
   \begin{figure}[hp]
     \centering
-    \includegraphics[width=\textwidth]{HW3-3.gv.2.png}
-    \caption{All strings over $\{a,b\}$ that contain $aab$ but not $bba$}
+    \includegraphics[width=.8\textwidth]{HW3-3.gv.png}
+    \caption{All strings over $\{a, b, c\}$ that contain an even number
+    of a's and an even number of b's and an even number of c's.}
   \end{figure}
 
 \end{enumerate}
