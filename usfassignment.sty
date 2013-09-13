@@ -1,0 +1,115 @@
+\ProvidesPackage{usfassignment}[2013/09/13 USF Assignment Templates]
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm,amssymb} % Math packages
+\usepackage{graphicx}
+\usepackage{float} % Use [H] to force figure not float
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+% -----------------------------------------------------------------------------
+% TITLE SECTION
+% -----------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+% Write
+\newcommand{\settitle}[1]{
+  \gdef\@thetitle{#1}
+  \title{
+    \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+    \huge #1 \\ % The assignment title
+    \horrule{2pt} \\[1.0cm] % Thick bottom horizontal rule
+  }
+}
+\newcommand{\setauthor}[1]{
+  \gdef\@theauthor{#1}
+  \author{#1}
+}
+\newcommand{\setcourse}[1]{\gdef\@thecourse{#1}}
+
+% Read
+\makeatletter
+\def\gettitle{\@thetitle}
+\def\getauthor{\@theauthor}
+\def\getcourse{\@thecourse}
+\makeatother
+
+\date{\normalsize\today} % Today's date or a custom date
+
+% --------------------
+% Quote Style
+% --------------------
+
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\makeatletter
+
+\tikzset{%
+  fancy quotes/.style={
+    text width=\fq@width pt,
+    align=justify,
+    inner sep=.2em,
+    anchor=north west,
+    minimum width=\textwidth,
+  },
+  fancy quotes width/.initial={.8\textwidth},
+  fancy quotes marks/.style={
+    scale=2,
+    text=white,
+    inner sep=0pt,
+  },
+  fancy quotes opening/.style={
+    fancy quotes marks,
+  },
+  fancy quotes closing/.style={
+    fancy quotes marks,
+  },
+  fancy quotes background/.style={
+    show background rectangle,
+    inner frame xsep=0pt,
+    background rectangle/.style={
+      fill=gray!25,
+      rounded corners,
+    },
+  }
+}
+
+\newenvironment{fancyquotes}[1][]{%
+  \noindent
+  \tikzpicture[fancy quotes background]
+  \node[fancy quotes opening,anchor=north west] (fq@ul) at (0,0) {$``$};
+  \tikz@scan@one@point\pgfutil@firstofone(fq@ul.east)
+  \pgfmathsetmacro{\fq@width}{\textwidth - 2*\pgf@x}
+  \node[fancy quotes,#1] (fq@txt) at (fq@ul.north west) \bgroup}
+{\egroup;
+  \node[overlay,fancy quotes closing,anchor=east] at (fq@txt.south east) {''};
+  \endtikzpicture}
+
+\makeatother
+
+% --------------------
+% Header and Footer
+% --------------------
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead[L]{\normalfont\normalsize\textsc{\getcourse}} % Class
+\fancyhead[R]{\normalfont\normalsize\textsc{\getauthor}} % Author
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\endinput
