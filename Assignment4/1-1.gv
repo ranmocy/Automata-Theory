@@ -1,0 +1,84 @@
+digraph 1 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 3 5;
+	node[shape=circle];
+
+        0->1[label="init"];
+        
+        1->1[label="a+b"];
+        1->2[label="b"];
+        2->3[label="b"];
+        3->3[label="a+b"];
+        
+        1->4[label="b"];
+        4->5[label="a"];
+}
+
+digraph 2 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 3 4;
+	node[shape=circle];
+
+        0->1[label="init"];
+        
+        1->1[label="a+b"];
+        1->2[label="b"];
+        2->3[label="b"];
+        3->3[label="a+b"];
+        
+        1->4[label="ba"];
+}
+
+digraph 3 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 3 4;
+	node[shape=circle];
+
+        0->1[label="init"];
+        
+        1->1[label="a+b"];
+        1->2[label="b"];
+        2->3[label=<b(a+b)<SUB>*</SUB>>];
+         
+        1->4[label="ba"];
+}
+
+digraph 3 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 2 4;
+	node[shape=circle];
+
+        0->1[label="init"];
+        
+        1->1[label="a+b"];
+        1->2[label=<bb(a+b)<SUB>*</SUB>>];
+         
+        1->4[label="ba"];
+}
+
+digraph 4 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 2;
+	node[shape=circle];
+
+        0->1[label="init"];
+        
+        1->1[label="a+b"];
+        1->2[label=<ba+bb(a+b)<SUB>*</SUB>>];
+}
+
+digraph 5 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 2;
+	node[shape=circle];
+
+        0->1[label="init"];
+        
+        1->2[label=<(a+b)<sup>*</sup>(ba+bb(a+b)<SUP>*</SUP>)>];
+}

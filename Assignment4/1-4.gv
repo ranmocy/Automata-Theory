@@ -1,0 +1,13 @@
+digraph 1 {
+	rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 0;
+	node[shape=circle];
+
+        s->0[label="init"];
+
+        0->0[label="0"];
+        0->-1[label="-1"];
+        -1->0[label="2"]
+        -1->-1[label="1"];
+}
