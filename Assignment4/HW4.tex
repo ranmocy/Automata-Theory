@@ -35,26 +35,28 @@ The simplest expression is $(a+b)^*(ba+bb(a+b)^*)$.
 
 \begin{figure}[hp]
   \centering
-  \includegraphics[width=.4\textwidth]{1-2.gv.png}
-  \includegraphics[width=.4\textwidth]{1-2.gv.2.png}
-  \includegraphics[width=.4\textwidth]{1-2.gv.3.png}
-  \includegraphics[width=.4\textwidth]{1-2.gv.4.png}
-  \includegraphics[width=.4\textwidth]{1-2.gv.5.png}
-  \caption{(8 points) $L$ = All strings over ${0,1}$ that do not contain the substring $bba$}
+  \includegraphics[scale=.5]{1-2.gv.png}
+  \includegraphics[scale=.5]{1-2.gv.2.png}
+  \includegraphics[scale=.5]{1-2.gv.3.png}
+  \includegraphics[scale=.5]{1-2.gv.4.png}
+  \includegraphics[scale=.5]{1-2.gv.5.png}
+  \caption{(8 points) $L$ = All strings over ${0,1}$ that do not
+    contain the substring $110$}
 \end{figure}
-The simplest expression is $(a+ba)^*(\epsilon + bb^*)$.
+The simplest expression is $(0+10)^*(\epsilon + ^*)$.
 
 \begin{figure}[hp]
   \centering
-  \includegraphics[width=.4\textwidth]{1-3.gv.png}
-  \includegraphics[width=.4\textwidth]{1-3.gv.2.png}
-  \includegraphics[width=.4\textwidth]{1-3.gv.3.png}
-  \includegraphics[width=.4\textwidth]{1-3.gv.4.png}
-  \includegraphics[width=.4\textwidth]{1-3.gv.5.png}
+  \includegraphics[scale=.5]{1-3.gv.png}
+  \includegraphics[scale=.5]{1-3.gv.2.png}
+  \includegraphics[scale=.5]{1-3.gv.3.png}
+  \includegraphics[scale=.5]{1-3.gv.4.png}
+  \includegraphics[scale=.5]{1-3.gv.5.png}
   \caption{(8 points) $L$ = All strings over ${a,b}$ that contain $aba$ but not $bb$}
 \end{figure}
 The simplest expression is $(a+ba)^*(b+\epsilon)aba(a+ba)^*(b+\epsilon)$.
 
+\pagebreak
 
 % -----------------------------------------------------------------------------
 % PROBLEM 2
@@ -73,22 +75,18 @@ The simplest expression is $(a+ba)^*(b+\epsilon)aba(a+ba)^*(b+\epsilon)$.
     (3 points) If $L \subseteq L_R$, then $L$ must be regular.
   \end{fancyquotes}
 
-  True.
+  False.
 
-  Since $L \subseteq L_R \in L_{REG}$,
-  so if $L\subseteq L_R$, $L$ must be regular.
+  For example $L_R = 0^*1^*$ and $L = 0^n1^n$, and $L$ is non-regular.
 
 \item
   \begin{fancyquotes}
     (3 points) If $L \subseteq L_{NR}$, then $L$ cannot be regular.
   \end{fancyquotes}
 
-  True.
+  False.
 
-  $L \subseteq L_{NR} \in \overline{L_{REG}} = L_{NREG} =
-  \{L: \text{L is a non-regular language.}\}$
-
-  So if $L \subseteq L_{NR}$, then $L$ cannot be regular.
+  For example $L_{NR} = 0^n1^n$ and $L = 01$, and $L$ is regular.
 
 \item
   \begin{fancyquotes}
@@ -98,7 +96,7 @@ The simplest expression is $(a+ba)^*(b+\epsilon)aba(a+ba)^*(b+\epsilon)$.
   False.
 
   Given $L_{NR}=\{s: 0^n1^n2^n, \text{over}\;\{0,1,2\}\}$,
-  $L_{R}=R[{(0+1)}^*]$. So $L_{NR}\cap L_R = \{s: 0^n1^n,
+  $L_{R}=R[{(0+1)}^*]$. Let $L = L_{NR}\cap L_R = \{s: 0^n1^n,
   \text{over}\;\{0,1,2\}\}$, which is a non regular language.
 
 \item
@@ -109,7 +107,7 @@ The simplest expression is $(a+ba)^*(b+\epsilon)aba(a+ba)^*(b+\epsilon)$.
   False.
 
   Given $L_{NR}=\{s: 0^*1^n2^n, \text{over}\;\{0,1,2\}\}$,
-  $L_{R}=R[{(0+1)}^*]$. So $L_{NR}\cap L_R = R[0^*1^*]$, which is a
+  $L_{R}=R[{(0+1)}^*]$. Let $L = L_{NR}\cap L_R = R[0^*]$, which is a
   regular language.
 
 \item
@@ -122,7 +120,7 @@ The simplest expression is $(a+ba)^*(b+\epsilon)aba(a+ba)^*(b+\epsilon)$.
 
   Assume that $L = \overline{L_{NR}}$ is a regular language.
   Since regular languages are closed under complementation, then
-  $\overline{L} = \overline{\overline{L_{NR}}} = L_{NR} \in L_{NREG}$.
+  $\overline{L} = \overline{\overline{L_{NR}}} = L_{NR} \in L_{REG}$.
 
   Contradicted. So $L = \overline{L_{NR}}$ is not a regular language.
 
@@ -139,6 +137,7 @@ The simplest expression is $(a+ba)^*(b+\epsilon)aba(a+ba)^*(b+\epsilon)$.
   Then $L_2 = R[r_1r_2]$ which is regular.
 \end{enumerate}
 
+\pagebreak
 
 % -----------------------------------------------------------------------------
 % PROBLEM 3
@@ -159,21 +158,11 @@ The simplest expression is $(a+ba)^*(b+\epsilon)aba(a+ba)^*(b+\epsilon)$.
     (4 points) $L = \{a^n(a+b)^*b^n, n\geq 2\}$
   \end{fancyquotes}
 
-  It is non-regular.
+  It is regular.
 
-  Assume that it's a regular language.
-
-  Let $k$ be the constant of the pumping lemma.
-
-  Given a string $w = a^kb^k \in L$, which $k>n$.
-
-  If we break $w = xyz$ such that $|xy|<k, |y|>0$, then
-  $x = a^i, y = a^j, z = a^{k-i-j}b^k$.
-
-  Consider a new string $w_2 = xy^2z = a^{k+j}b^k$,
-  as long as $j>0$ it cannot be in $L$.
-
-  Hence, $L$ is not regular by pumping lemma.
+  All we have to garentee is that the string has at least two $a$ at
+  the beginning and at least two $b$ at the end.
+  Which can be expressed as regular expression: $aa(a+b)^*bb$.
 
 \item
   \begin{fancyquotes}
@@ -209,7 +198,7 @@ The simplest expression is $(a+ba)^*(b+\epsilon)aba(a+ba)^*(b+\epsilon)$.
 
 \item
   \begin{fancyquotes}
-    (4 points) $L = \{a^{n}b^l : n/l is an integer\}$
+    (4 points) $L = \{a^{n}b^l : n/l\;\text{is an integer}\}$
   \end{fancyquotes}
 
   It is non-regular.
@@ -240,6 +229,7 @@ The simplest expression is $(a+ba)^*(b+\epsilon)aba(a+ba)^*(b+\epsilon)$.
 
 \end{enumerate}
 
+\pagebreak
 
 % -----------------------------------------------------------------------------
 % PROBLEM 4
@@ -288,12 +278,12 @@ So that:
 
 Let $M = (K,\Sigma,\Delta,s,F)$ be a NFA, and $K = \{-1,0\}$, $\Sigma
 = T $, $\Delta = \{((q_1,t),q_2): q_1,q_2\in K, t\in X_i, 2\times
-q_1+i=q_2 \} $, $s = s$, $F = \{0\}$.
+q_1+i=q_2 \} $, $s = 0$, $F = \{0\}$.
 The graph will look like this:
 
 \begin{figure}[hp]
   \centering
-  \includegraphics[width=.4\textwidth]{1-4.gv.png}
+  \includegraphics[scale=.5]{1-4.gv.png}
   \caption{addition correct NFA}
 \end{figure}
 
@@ -303,6 +293,7 @@ $L[R_i] = X_i$.
 Even further, we can have NFA for addition check of arbitrary $k$ hex.
 Just extend the symbol sets and change the $2$ in $\Delta$ to the hex $k$.
 
+\pagebreak
 
 % -----------------------------------------------------------------------------
 % PROBLEM 5
@@ -316,7 +307,8 @@ Just extend the symbol sets and change the $2$ in $\Delta$ to the hex $k$.
 
 Assume that it's a regular language.
 Then since regular languages are closed under complementation,
-we have $L_2 = \overline{L}$ is a regular language.
+we have $L_2 = \overline{L}$ is a regular language which the number of
+$a$ is a prime number.
 
 Let $n$ be the constant of the pumping lemma.
 
