@@ -1,0 +1,49 @@
+digraph HW5_1_1 {
+        rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 2;
+	node[shape=circle];
+
+        0->1[label="init"];
+        
+        1->1[label=<(a,&epsilon;,XXX)>];
+        1->2[label=<(&epsilon;,&epsilon;,&epsilon;)>];
+        2->2[label=<(b,X,&epsilon;)>];
+}
+
+digraph HW5_1_2 {
+        rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 2;
+	node[shape=circle];
+
+        0->1[label="init"];
+        
+        1->1[label=<(a,&epsilon;,X)>];
+        1->2[label=<(&epsilon;,&epsilon;,&epsilon;)>];
+        2->2[label=<(a,X,&epsilon;), (b,X,&epsilon;)>];
+}
+
+digraph HW5_1_3 {
+        rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 2;
+	node[shape=circle];
+
+        0->1[label=<(&epsilon;,&epsilon;,AB)>];
+        
+        1->1[label=<(a,A,A), (b,A,CA), (a,C,&epsilon;)>];
+        1->2[label=<(&epsilon;,A,&epsilon;)>];
+        2->2[label=<(b,B,B), (&epsilon;,B,&epsilon;)>];
+}
+
+digraph HW5_1_4 {
+        rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 1;
+	node[shape=circle];
+
+        0->1[label=<(&epsilon;,&epsilon;,S)>];
+        
+        1->1[label=<(1,S,&epsilon;), (2,S,&epsilon;), (3,S,&epsilon;), (-,S,SS), (/,S,SS)>];
+}

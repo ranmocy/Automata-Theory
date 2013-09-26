@@ -1,0 +1,20 @@
+digraph HW5_1_1 {
+        rankdir=LR;
+	size="8,5"
+	node[shape=doublecircle]; 3 5;
+	node[shape=circle];
+
+        0->1[label="init"];
+
+        1->1[label=<(0,&epsilon;,X)>];
+        1->2[label=<(1,X,&epsilon;)>];
+        2->2[label=<(1,X,&epsilon;)>];
+        2->3[label=<(&epsilon;,X,&epsilon;)>];
+        3->3[label=<(&epsilon;,X,&epsilon;)>];
+        2->4[label=<(0,&epsilon;,&epsilon;)>];
+        2->5[label=<(1,&epsilon;,&epsilon;)>];
+        4->4[label=<(&epsilon;,X,&epsilon;)>];
+        4->5[label=<(&epsilon;,&epsilon;,&epsilon;)>];
+        1->5[label=<(1,&epsilon;,&epsilon;)>];
+        5->5[label=<(0,&epsilon;,&epsilon;), (1,&epsilon;,&epsilon;)>];
+}
