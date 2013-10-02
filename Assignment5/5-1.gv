@@ -7,7 +7,7 @@ digraph HW5_1_1 {
         0->1[label="init"];
         
         1->1[label=<(a,&epsilon;,XXX)>];
-        1->2[label=<(&epsilon;,&epsilon;,&epsilon;)>];
+        1->2[label=<(abbb;,&epsilon;,&epsilon;)>];
         2->2[label=<(b,X,&epsilon;)>];
 }
 
