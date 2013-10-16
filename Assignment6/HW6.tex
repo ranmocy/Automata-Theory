@@ -28,7 +28,11 @@
 \end{fancyquotes}
 
 \begin{enumerate}
-\item $\{a^{2n} : n>0\}$
+\item
+  \begin{fancyquotes}
+    $\{a^{2n} : n>0\}$
+  \end{fancyquotes}
+
 
   $L$ is regular as $(aa)^*aa$.
 
@@ -38,7 +42,11 @@
     \caption{$\{a^{2n} : n>0\}$}
   \end{figure*}
 
-\item $\{a^{2^n} : n>0\}$
+\item
+  \begin{fancyquotes}
+    $\{a^{2^n} : n>0\}$
+  \end{fancyquotes}
+
 
   $L$ is not context-free.
 
@@ -47,9 +55,9 @@
   Let $n = 2^m, m>0$ be the constant of the Context-Free pumping
   lemma.
 
-  Given $w = a^{n}$, we can break $w = uvxyz$, which $|vy|>0$.
-
-  Let $|vy| = k<n$, $|uxz| = n-k$, then $uv^{i}xy^{i}z = a^{n+(i-1)k}$.
+  Given $w = a^{n}$, we can break $w = uvxyz$,
+  which $0<|vy|=k<n$. Then $|uxz| = n-k$, and $uv^{i}xy^{i}z =
+  a^{n+(i-1)k}$.
 
   Then let $i=2$, so that $w=a^{2^{m}+k}$.
   Since $k<n=2^{m}$, then $2^{m}+k<2\times 2^{m}=2^{m+1}$.
@@ -58,45 +66,34 @@
 
   So $L$ is not context-free.
 
-\item $\{a^{n}b^{m} : m\leq n\leq 2m \}$
+\item
+  \begin{fancyquotes}
+    $\{a^{n}b^{m} : m\leq n\leq 2m \}$
+  \end{fancyquotes}
 
-  $L$ is non-context-free.
+  Assume $L$ is regular.
 
-  Assume $L$ is context-free.
+  Let $n$ be the constant of the pumping lemma.
 
-  Let $m$ be the constant of the Context-Free pumping lemma.
+  Given string $w = a^{n}b^{n}$, we can break into $xyz$, which
+  $|xy|<n, |y|>0$. So $y$ must be all $0$'s, let $y = a^{j}$.
 
-  Given $w = a^{m}b^{m} \in L$, we can break $w=uvxyz$, which
-  $|vy|>0$.
+  Consider when $i=0$. $w_2 = xy^{0}z = a^{n-j}b^{n}\not\in L$.
 
-  Let $vy = a^{j}b^{k}$, $|uxz| = 2m-j-k$, then $w = uv^{i}xy^{i}z =
-  a^{m+(i-1)j}b^{m+(i-1)k}$.
+  So $L$ is not regular.
 
-  When $j<k$:
+  Context-Free Grammer:
 
-  \begin{equation}
-    \begin{split}
-      2m+(i-1)j &< m+(i-1)k\\
-      m &< (i-1)(k-j)\\
-      i &> \frac{m}{k-j}+1
-    \end{split}
-  \end{equation}
+  \[
+  S \rightarrow aSb | aaSb | \epsilon
+  \]
 
-  So let $i=2$, so that $w = a^{m+j}b^{m+k} \not\in L$, since $m+j<m+k$.
-
-  When $j>k$:
-
-  \begin{equation}
-    \begin{split}
-      2m+(i-1)j &< m+(i-1)k\\
-      m &< (i-1)(k-j)\\
-      i &> \frac{m}{j-k}+1
-    \end{split}
-  \end{equation}
-
-  So let $i=0$, so that $w = a^{m-j}b^{m-k} \not\in L$, since $m-j<m-k$.
-
-  So, $L$ is not context-free.
+  PDA:
+  \begin{figure}[hp]
+    \centering
+    \includegraphics[scale=0.7]{6-1.gv.2.png}
+    \caption{$\{a^{n}b^{m} : m\leq n\leq 2m \}$}
+  \end{figure}
 
 \end{enumerate}
 
