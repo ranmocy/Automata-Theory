@@ -1,0 +1,27 @@
+digraph G {
+        rankdir=LR;
+        splines=false;
+        label="Halting Machine";
+        
+	subgraph cluster {
+		label = "Halting Machine";
+                m1 [label="Generating Machine", shape=box];
+                T [shape=box];
+                q [shape=none, style=invisible];
+                
+                m1 -> T[label="M2"]
+                q -> T[label="q"];
+	}
+
+	input -> m1[label="M"];
+	input -> T[label="w", splines=ortho];
+	T -> output[label="yes"];
+	T -> output[label="no"];
+}
+
+digraph "M2" {
+        rankdir=LR;
+        label="M2";
+        
+        M->q[label="halts"];
+}

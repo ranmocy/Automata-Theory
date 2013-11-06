@@ -1,0 +1,27 @@
+digraph G {
+        rankdir=LR;
+        splines=false;
+        label="Empty Tape Halting Machine";
+        
+	subgraph cluster {
+		label = "Empty Tape Halting Machine";
+                m1 [label="Generating Machine"];
+                m1,T [shape=box];
+                q [shape=none, style=invisible];
+                
+                m1 -> T[label="M2"]
+                q -> T[label="q"];
+	}
+
+	input -> m1[label="M"];
+	T -> output[label="yes"];
+	T -> output[label="no"];
+}
+
+digraph GM {
+        rankdir=LR;
+        label="M2";
+
+        EraseTapeMachine->M;
+        M->q[label="halts"];
+}

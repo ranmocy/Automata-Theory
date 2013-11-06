@@ -1,0 +1,39 @@
+digraph G {
+        rankdir=LR;
+        #splines=false;
+        label="Empty Tape Halting Machine";
+        
+	subgraph cluster {
+		label = "Empty Tape Halting Machine";
+                m1 [label="Generating Machine"];
+                m1,T [shape=box];
+                m1 -> T[label="M1"]
+                m1 -> T[label="M2"]
+	}
+
+	input -> m1[label="M"];
+	T -> output[label="yes"];
+	T -> output[label="no"];
+}
+
+digraph GM1 {
+        rankdir=LR;
+        label="M1";
+
+        UTM [shape=box];
+        ignore, M, w [shape=none];
+
+        input -> ignore;
+        
+        M -> UTM;
+        w -> UTM;
+        UTM -> yes[label="halts"];
+}
+
+digraph GM2 {
+        rankdir=LR;
+        label="M2";
+
+        ignore [shape=none];
+        input -> ignore -> yes;
+}
