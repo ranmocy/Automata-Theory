@@ -1,6 +1,6 @@
 digraph G {
         rankdir=LR;
-        splines=false;
+        #splines=false;
         label="Halting Machine";
         
 	subgraph cluster {

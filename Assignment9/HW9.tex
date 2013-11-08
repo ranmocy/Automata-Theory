@@ -3,6 +3,7 @@
 \settitle{Assignment 9}
 \setauthor{Wanzhang Sheng}
 \setcourse{CS675: Automata Theory}
+\setlength\parindent{1em} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
 
 \begin{document}
 
@@ -30,14 +31,14 @@
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{9-1.gv.png}
-  \includegraphics[width=.5\textwidth]{9-1.gv.2.png}
+  \includegraphics[width=.4\textwidth]{9-1.gv.2.png}
 \end{figure}
 
-The generating machine generates $M_2$ by modified $M$, when $M$
-halts transfer to a new state $q$.
+Undecidable.
 
-If machine $T$ exists, then halting machine exists. So $T$ doesn't
-exist. Undecidable.
+The generating machine generates $M_2$ by modified $M$, when $M$
+halts transfer to a new state $q$. If machine $T$ exists, then halting
+machine exists. So $T$ doesn't exist.
 
 
 %= 2 ====================
@@ -54,11 +55,12 @@ exist. Undecidable.
   \includegraphics[width=.5\textwidth]{9-2.gv.2.png}
 \end{figure}
 
-The generating machine generates $M_2$ by modified $M$. Start from
-state $p$ and when $M$ halts transfer to a new state $q$.
+Undecidable.
 
-If machine $T$ exists, then empty tape halting machine exists. So $T$
-doesn't exist. Undecidable.
+The generating machine generates $M_2$ by modified $M$. Start from
+state $p$ and when $M$ halts transfer to a new state $q$. If machine
+$T$ exists, then empty tape halting machine exists. So $T$ doesn't
+exist.
 
 
 %= 3 ====================
@@ -69,20 +71,13 @@ doesn't exist. Undecidable.
   configuration with state $q$.
 \end{fancyquotes}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{9-3.gv.png}
-  \includegraphics[width=\textwidth]{9-3.gv.2.png}
-\end{figure}
+Decidable.
 
-The generating machine generates $M_2$ by modified $M$. Start by a
-machine to erase the whole tape (To ignore the input. Assume we know
-the end of the input.), followed by $M$, and when $M$ halts transfer
-to a new state $q$. When there is a configuration to let $M_2$ to get
-to $q$, it means the $M$ halts on empty tape.
-
-If machine $T$ exists, then empty tape halting machine exists. So $T$
-doesn't exist. Undecidable.
+For a given TM $M$, we can search the $e(M)$ to find if it exists a
+transition $(p,c)\rightarrow (q,a)$. If it exists, we can generate the
+configuration of $M$ with state $p$, position $t$ and write $c$ under
+$t$, so that this configuartion will lead to state $q$. If it doesn't
+exist, output NO.
 
 
 %= 4 ====================
@@ -99,13 +94,15 @@ doesn't exist. Undecidable.
   \includegraphics[width=.5\textwidth]{9-4.gv.2.png}
 \end{figure}
 
+Undecidable.
+
 The generating machine generates $M_2$ by modified $M$. Replace all
 the symbol $a$ appeared in $M$ by new symbol $x$ to get $MM$. And when
 $MM$ halts transfer to a new state and write $a$. $M_2$ write $a$ when
 and only when the $M$ halts on empty tape.
 
 If machine $T$ exists, then empty tape halting machine exists. So $T$
-doesn't exist. Undecidable.
+doesn't exist.
 
 
 %= 5 ====================
@@ -169,8 +166,8 @@ undecidable, the original problem is also undecidable.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{9-8.gv.png}
-  \includegraphics[width=.5\textwidth]{9-8.gv.2.png}
-  \includegraphics[width=.5\textwidth]{9-8.gv.3.png}
+  \includegraphics[width=.4\textwidth]{9-8.gv.2.png}
+  \includegraphics[width=.4\textwidth]{9-8.gv.3.png}
 \end{figure}
 
 If and only if $M$ halts on $w$, two TMs $M_1$ and $M_2$ halt on any
@@ -189,7 +186,7 @@ Machine doesn't exist, $T$ doesn't exist. So the problem is undecidable.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{9-9.gv.png}
-  \includegraphics[width=.5\textwidth]{9-9.gv.2.png}
+  \includegraphics[width=.4\textwidth]{9-9.gv.2.png}
 \end{figure}
 
 When $M$ halts on $w$, $M_1$ output anything which means $T$ output
